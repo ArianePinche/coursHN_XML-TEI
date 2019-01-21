@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?> 
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="a">
+   <teiHeader>
+      <!-- métadonnées -->
+      <fileDesc>
+         <titleStmt>
+            <title><!-- titre de l'oeuvre --></title>
+            <author><!-- nom de l'auteur --></author>
+            <editor><!-- nom de l'éditeur scientifique --></editor>
+            <respStmt>
+               <resp><!-- Description du contexte de création du document --></resp>
+               <persName>
+                  <forename></forename>
+                  <surname></surname>
+               </persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <!-- Données concernant l'édition / diffusion -->
+            <publisher></publisher>
+            <!-- attention l'ordre des balises est contraint -->
+            <pubPlace>Paris</pubPlace>
+            <date when-iso="1904">1904</date>
+            <distributor
+               facs=""
+               ><!-- Entité responsable de la diffusion de l'oeuvre --></distributor>     
+            <availability>
+               <!-- conditions de diffusion -->
+               <licence target="https://creativecommons.org/licenses/by-sa/3.0/deed.fr">Licence
+                  Creative Commons Attribution-partage dans les mêmes conditions</licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <!-- informations sur la source qui a permis d'établir le texte, méthode n°1 simple paragraphe descriptif
+               <p></p> -->
+            <bibl>
+               <!-- méthode n°2 : renseignements bibliographiques structurés d'une source, (permet de donner plus de renseignements quant à la matérialité de la source)-->
+               <title></title>  
+               <author><forename></forename>
+                  <surname></surname></author>
+               <editor><!-- editeur scientifique --></editor>
+               <publisher>éditeur</publisher>
+               <distributor facs=""
+                  ></distributor>
+               <pubPlace><!-- Lieu d'édition --></pubPlace>
+               <date></date>
+               <biblScope unit="volume" n="1"/>
+               <!-- emplacement de la source dans l'oeuvre papier -->
+               <biblScope unit="section" n="A"/>
+               <biblScope unit="tome" n="2"/>
+               <biblScope unit="page" from="43" to="83">pp.43-83</biblScope>
+               <availability>
+                  <licence target="https://creativecommons.org/licenses/by-sa/3.0/deed.fr"
+                     >Licence Creative Commons Attribution-partage dans les mêmes
+                     conditions</licence>
+               </availability>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <!-- Déclarations des données qui ne relèvent pas des données bibliographiques du texte encodé, 
+            informations complémentaires pour la compréhension du texte
+        = le paratexte -->
+         <settingDesc>
+            <!-- description des lieux -->
+         </settingDesc>
+         <particDesc>
+            <!-- décrit les locuteurs, voix ou autres participants identifiables d'une interaction linguistique -->      
+         </particDesc>
+         <langUsage><!-- informations sur la langue du document -->
+            <language ident="fr"/>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front></front>
+      <body><p></p></body>
+      <back></back>
+   </text>
+</TEI>
