@@ -84,12 +84,13 @@ Pour aller plus loin : Chap 12.2 [*Linking the Apparatus to the Text*](http://w
 **Déclaration des sources dans le `<sourceDesc>` :**
 *  `<listWit>` : donne une liste de tous les témoins cités dans un apparat critique;
 *  `<witness>` : témoin d'une édition.
-
-`<listWit>`
- `<witness xml:id="C1">Paris, BnF, ms 412</witness>`
- `<witness xml:id="C2">Paris, BnF, ms 411</witness>`
- `<witness xml:id="C3">London, British Library, royal 20 D. VI.</witness>`
-`</listWit>`
+```XML
+<listWit>
+ <witness xml:id="C1">Paris, BnF, ms 412</witness>
+ <witness xml:id="C2">Paris, BnF, ms 411</witness>
+ <witness xml:id="C3">London, British Library, royal 20 D. VI.</witness>
+</listWit>
+```
 
 ----
 
@@ -98,23 +99,28 @@ Pour aller plus loin : Chap 12.2 [*Linking the Apparatus to the Text*](http://w
 * `<app>` contient une entrée dans un apparat critique, constituée d’un lemme facultatif ou d’au moins une leçon;
 * `<lem>`contient le lemme.
 * `<rdg>`  contient une variante/leçon du texte;
-	* `<app>`
- `<lem wit="#El #Hg">Experience</lem>`
- `<rdg wit="#La" type="substantive">Experiment</rdg>`
- `<rdg wit="#Ra2" type="substantive">Eryment</rdg>`
-`</app>`
+```XML
+ <app>
+ 	<lem wit="#El #Hg">Experience</lem>
+ 	<rdg wit="#La" type="substantive">Experiment</rdg>
+ 	<rdg wit="#Ra2" type="substantive">Eryment</rdg>
+</app>
+```
 
 ---
 **Constitution de l'apparat critique (2)**
 
 * `<rdgGrp>` regroupe deux leçons ou plus qui sont perçues comme ayant une relation génétique ou une autre affinité; 
-	* `<app>`
- `<lem wit="#fr_wit1">comte</lem>`
- `<rdgGrp type="orthographic">`
-  `<rdg wit="#fr_wit2">cante</rdg>`
-  `<rdg wit="#fr_wit3">contes</rdg>`
- `</rdgGrp>`
-`</app>`
+
+```XML
+<app>
+ <lem wit="#fr_wit1">comte</lem>
+ <rdgGrp type="orthographic">
+  <rdg wit="#fr_wit2">cante</rdg>
+  <rdg wit="#fr_wit3">contes</rdg>
+ </rdgGrp>
+</app>
+```
 
 
 ---

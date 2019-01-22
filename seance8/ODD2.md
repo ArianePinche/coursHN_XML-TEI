@@ -27,18 +27,21 @@ Tutoriel "oddbyexample"
 
 Modification d'un élément avec @mode="change"
 
-`<elementSpec ident="lg" mode="change">`
-               `<attList>`
-                  `<attDef ident="part" mode="delete"/>`
-                  `<attDef ident="type" mode="change">
-                  <valList mode="add" type="closed">`
-                        `<valItem ident="quatrain"/>`
-                        `<valItem ident="sizain"/>`
-                        `<valItem ident="sonnet"/>`
-                        `<valItem ident="tercet"/>`
-                     `</valList></attDef>`
-               `</attList>`
-`</elementSpec>`
+```XML
+<elementSpec ident="lg" mode="change">
+     <attList>
+         <attDef ident="part" mode="delete"/>
+         <attDef ident="type" mode="change">
+            <valList mode="add" type="closed">
+                <valItem ident="quatrain"/>
+                 <valItem ident="sizain"/>
+                  <valItem ident="sonnet"/>
+                   <valItem ident="tercet"/>
+             </valList>
+           </attDef>
+       </attList>
+</elementSpec>
+```
 
 - Modifier dans l'ODD du texte de Verlaine l'élément `<l>`en lui ajoutant un attribut "n" obligatoire.
 
@@ -60,34 +63,57 @@ Chaque élément est appelé à l’aide d’un **elementRef** et d’un attribu
 ---
 #### Exemple
 
-`<elementSpec ident="div1" mode="change">`
-   `<content>`
-      `<sequence preserveOrder="true">`
-         `<elementRef key="head" minOccurs="1" maxOccurs="1"/>`
-		 `<elementRef key="p" minOccurs="1" maxOccurs="unbounded"/>`
-          `<elementRef key="div2" minOccurs="0" maxOccurs="unbounded"/>`
-        `</sequence>`
-   `</content>`
-`</elementSpec>`
+```XML 
+<elementSpec ident="div1" mode="change">
+   <content>
+      <sequence preserveOrder="true">
+         <elementRef key="head" minOccurs="1" maxOccurs="1"/>
+		 <elementRef key="p" minOccurs="1" maxOccurs="unbounded"/>
+          <elementRef key="div2" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+   </content>
+</elementSpec>
+```
 
 NB : Pour autoriser du texte comme contenu, on peut ajouter dans la séquence : `<textNode/>`
 
 ---
 Il est également possible de raffiner ses séquences avec l’élément `<alternate>`
 *Exemple : définition du contenu de `<choice>` :*
- `<alternate>`
-  `<sequence>`
-   `<elementRef key="sic"/>`
-   `<elementRef key="corr"/>`
-  `</sequence>`
-  `<sequence>`
-   `<elementRef key="orig"/>`
-   `<elementRef key="reg"/>`
-  `</sequence>`
-  `<sequence>`
-   `<elementRef key="abbr"/>`
-   `<elementRef key="expan"/>`
-  `</sequence>`
- `</alternate>`
+ 
+ ```XML
+ <alternate>
+  <sequence>
+   <elementRef key="sic"/>
+   <elementRef key="corr"/>
+  </sequence>
+  <sequence>
+   <elementRef key="orig"/>
+   <elementRef key="reg"/>
+  </sequence>
+  <sequence>
+   <elementRef key="abbr"/>
+   <elementRef key="expan"/>
+  </sequence>
+ </alternate>
+```
+
  
  ---
+ 
+ ## Exercice
+
+Reprendre le fichier XML de Lucain,
+
+**1-Créer la documentation de votre projet**
+
+- Insérer dans votre documentation au moins un exemple ;
+- Modifier la documentation d’un élément en réécrivant sa description pour la faire correspondre au projet.
+
+**2-Ajouter des règles à votre XML**
+- rendre obligatoire la présence d’un seul `<lem>` ;
+- rendre obligatoire la présence d’une ou plusieurs leçons ;
+- Faire en sorte de @n de `<l>` ne puisse accepter que des valeurs numériques ;
+- Générer votre schéma et l’associer à votre fichier XML.
+
+**3-Générer vos guidelines en HTML**

@@ -75,20 +75,23 @@ Dans l’introduction (première div1), au sein d’un texte rédigé :
 - **egXML** et **@xmlns="http://www.tei-c.org/ns/Examples** permettent d’insérer des exemples en XML dans sa documentation ;
 
 ---
-#### Exemple : 
-`<head>`Le fileDesc`</head>`
-`<p>`Le `<gi>`fileDesc`</gi>` comporte lui-même :
-`<specList>`
-`<specDesc key="titleStmt"/>`
+#### Exemple :
+```XML
+<head>Le fileDesc</head>
+<p>Le <gi>fileDesc</gi> comporte lui-même :
+<specList>
+<specDesc key="titleStmt"/>
 [...]
-`</specList>`
-Le `<gi>`sourceDesc`</gi>` contient toutes les informations nécessaires sur le manuscrit de base, C`<hi rend="exp">`1`</hi>``<note>`Le sigle correspond au manuscrit 412 de la Bibliothèque Nationale de France`</note>`.`</p>`
-`<egXML xmlns="http://www.tei-c.org/ns/Examples">`
-  `<msIdentifier>`
-  `<country>`Paris`</country>`
-  `<settlement>`Bibliothèque nationale de France`</settlement>`
-                                [...]
- `</egXML>`
+</specList>
+Le <gi>sourceDesc</gi> contient toutes les informations nécessaires sur le manuscrit de base, C<hi rend="exp">1</hi><note>Le sigle correspond au manuscrit 412 de la Bibliothèque Nationale de France</note>.</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <msIdentifier>
+  <country>Paris</country>
+  <settlement>Bibliothèque nationale de France</settlement>
+    [...]
+  </msIdentifier>                           
+ </egXML>
+  ```
  
  ---
  Dans les déclarations d’éléments 

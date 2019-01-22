@@ -6,14 +6,16 @@ Tout document TEI a au moins deux parties :
 * Un en-tête, représenté au moyen d’un élément **`<teiHeader>`** contenant des métadonnées décrivant le document ;
 * le texte lui-même, représenté par un élément **`<text>`**.
 
-`<TEI xmlns=’http://www.tei-c.org/​ns/​1.0’>`
-     `<teiHeader>`
-         `<!-- métadonnées décrivant un texte -->`
-    `</teiHeader>`
-     `<text>`
-         `<!-- une représentation du texte lui-même -->`
-     `</text>`
-`</TEI>`
+```XML
+<TEI xmlns='http://www.tei-c.org/​ns/​1.0'>
+     <teiHeader>
+         <!-- métadonnées décrivant un texte -->
+    </teiHeader>
+     <text>
+        <!-- une représentation du texte lui-même -->
+     </text>
+</TEI>
+```
 
 ----
 
@@ -78,19 +80,21 @@ Il se compose de trois parties obligatoires :
 
 Exemple :
 
-`<teiHeader>`
-     `<fileDesc>`
-         `<titleStmt>`
-             `<title>Titre de l’œuvre</title>`
-         `</titleStmt>`
-         `<publicationStmt>`
-             `<p>Informations sur la publication de l’œuvre.</p>`
-         `</publicationStmt>`
-         `<sourceDesc>`
-             `<p>Informations sur la source dont est tirée l’œuvre.</p>`
-         `</sourceDesc>`
-     `</fileDesc>`
-`</teiHeader>`
+```XML
+<teiHeader>
+ <fileDesc>
+   <titleStmt>
+     <title>Titre de l’œuvre</title>
+   </titleStmt>
+   <publicationStmt>
+     <p>Informations sur la publication de l’œuvre.</p>
+   </publicationStmt>
+   <sourceDesc>
+      <p>Informations sur la source dont est tirée l’œuvre.</p>
+   </sourceDesc>
+  </fileDesc>
+</teiHeader>
+```
 
 ---
 
