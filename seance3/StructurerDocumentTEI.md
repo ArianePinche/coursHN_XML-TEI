@@ -42,7 +42,6 @@ Pour réviser : https://www.youtube.com/watch?v=VvSQ530gxPM&index=3&list=PL77mH
 	- front ;
 	- body.
 - Encoder : 
-	- le teiHeader ;
 	- le front ;
 	- le premier conte (titre et première phrase du texte).
 ---
