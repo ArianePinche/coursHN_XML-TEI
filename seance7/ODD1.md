@@ -49,7 +49,6 @@ Comment obtenir un encodage TEI-conformant ?
 L’intégralité des spécifications XML est englobée dans un **schemaSpec**
 
 - Les déclarations sont organisées grâce aux éléments suivants (liste non exhaustive)  :
-	- **moduleSpec** (spécification de module) documente la structure, le contenu et les fonctions d’un module.
 	- **moduleRef** (référence de module) référence un module qui doit être incorporé dans un schéma.
 	- **elementSpec** (spécification d’élément) documente la structure, le contenu et l’emploi d’un élément.
 	- **classSpec** (spécification de classe) contient des informations de référence pour une classe d’éléments TEI, c’est-à-dire un groupe d’éléments qui figurent ensemble dans des modèles de contenu ou qui partagent un attribut commun, ou qui ont l’un et l’autre.
