@@ -16,10 +16,6 @@ Pour personnaliser son schéma, il existe 4 manipulations principales :
 	- `<moduleRef key="textcrit" except="rdgGrp"/>`
 3- Non insertion dans un module ou une classe avec @include
 	- `<moduleRef key="textcrit" include="app lem rdg"/>`
-	
----
-
-Tutoriel "oddbyexample"
 
 ---
 
@@ -27,23 +23,31 @@ Tutoriel "oddbyexample"
 
 Modification d'un élément avec @mode="change"
 
+*Exemple d'ajout d'une valeur contrainte d'attribut*
+
 ```XML
 <elementSpec ident="lg" mode="change">
      <attList>
          <attDef ident="part" mode="delete"/>
          <attDef ident="type" mode="change">
             <valList mode="add" type="closed">
-                <valItem ident="quatrain"/>
-                 <valItem ident="sizain"/>
-                  <valItem ident="sonnet"/>
-                   <valItem ident="tercet"/>
+                <valItem ident="decasyllabe"/>
              </valList>
            </attDef>
        </attList>
 </elementSpec>
 ```
+---
+*Exemple de changement de comportement d'un attribut*
 
-- Modifier dans l'ODD du texte de Verlaine l'élément `<l>`en lui ajoutant un attribut "n" obligatoire.
+```XML
+<elementSpec ident="l" mode="change">
+  <attList>
+     <attDef ident="n" mode="change" usage="req"/>
+  </attList>
+</elementSpec>
+```
+- Dans l'ODD de Sainte Eulalie modifier l'élément `<l>`en lui ajoutant un attribut "n" obligatoire.
 
 ----
 ### Addition d'un élément 
@@ -65,13 +69,13 @@ Chaque élément est appelé à l’aide d’un **elementRef** et d’un attribu
 
 ```XML 
 <elementSpec ident="div1" mode="change">
-   <content>
-      <sequence preserveOrder="true">
-         <elementRef key="head" minOccurs="1" maxOccurs="1"/>
-		 <elementRef key="p" minOccurs="1" maxOccurs="unbounded"/>
-          <elementRef key="div2" minOccurs="0" maxOccurs="unbounded"/>
-        </sequence>
-   </content>
+ <content>
+  <sequence preserveOrder="true">
+   <elementRef key="head" minOccurs="1" maxOccurs="1"/> 
+   <elementRef key="p" minOccurs="1" maxOccurs="unbounded"/>
+   <elementRef key="div2" minOccurs="0" maxOccurs="unbounded"/>
+  </sequence>
+ </content>
 </elementSpec>
 ```
 
@@ -111,9 +115,8 @@ Reprendre le fichier XML de Lucain,
 - Modifier la documentation d’un élément en réécrivant sa description pour la faire correspondre au projet.
 
 **2-Ajouter des règles à votre XML**
-- rendre obligatoire la présence d’un seul `<lem>` ;
-- rendre obligatoire la présence d’une ou plusieurs leçons ;
-- Faire en sorte de @n de `<l>` ne puisse accepter que des valeurs numériques ;
+- Rendre obligatoire la présence d’un seul `<lem>` ;
+- Rendre obligatoire la présence d’une ou plusieurs leçons ;
 - Générer votre schéma et l’associer à votre fichier XML.
 
 **3-Générer vos guidelines en HTML**
