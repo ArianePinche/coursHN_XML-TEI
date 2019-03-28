@@ -19,7 +19,7 @@ Comment obtenir un encodage TEI-conformant ?
 - Relax NG;
 - Schematron;
 - XML schéma;
-- - ODD "One Document Does it all";
+- ODD "One Document Does it all";
 	- Voir les [TEIguidelines](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/USE.html);
 	- Voir la [documentation sur les ODD](http://www.tei-c.org/guidelines/customization/getting-started-with-p5-odds/)
 
@@ -33,15 +33,16 @@ Comment obtenir un encodage TEI-conformant ?
 
 - Manipulation [Roma](http://roma.tei-c.org)
 	- Créer une ODD pour décrire un manuscrit;
-	- Appliquer le schéma au fichier XML Eulalie
+	- Ouvrir l'ODD dans Oxygen;
+	- Grâce à un scénario de configuration, créer un schéma RelaxNG à partir de l'ODD;
+	- Appliquer le schéma RelaxNG au fichier XML Eulalie.
 ---
 - Manipulation [Roma](http://roma.tei-c.org)
-	- Créer une ODD pour décrire un manuscrit;
 	- Modifier la classe att.global en supprimant @facs;
-	- Ouvrir l'ODD, chercher @facs.
-	- lier l'ODD à son fichier XML
-		- transformer l'ODD pour obtenir un schéma relaxNG
-		- lier le shéma relaxNG au fichier XML
+	- Ouvrir l'ODD, chercher @facs;
+	- Lier la nouvelle ODD à son fichier XML :
+		- Transformer l'ODD pour obtenir un schéma relaxNG;
+		- Lier le schéma relaxNG au fichier XML.
 ---
 ## Organisation des spécifications XML
 
@@ -75,6 +76,7 @@ Dans l’introduction (première div1), au sein d’un texte rédigé :
 - **egXML** et **@xmlns="http://www.tei-c.org/ns/Examples** permettent d’insérer des exemples en XML dans sa documentation ;
 
 ---
+
 #### Exemple :
 ```XML
 <head>Le fileDesc</head>
@@ -97,21 +99,22 @@ Le <gi>sourceDesc</gi> contient toutes les informations nécessaires sur le manu
  Dans les déclarations d’éléments 
  
 - Dans **elementSpec** ou **attDef**.
-	**gloss** (glose) identifie une expression ou un mot utilisé pour fournir une glose ou une définition à quelque autre mot ou expression.
-	**desc** (description) contient une courte description de l’objet documenté par son élément parent, qui comprend son utilisation prévue, son but, ou son application là où c’est approprié.
-`<elementSpec ident="lem" mode="change">`
- `<gloss>Lemme</gloss>`
- `<desc>Permet de signaler la leçon choisie dans le texte édité.</desc>`
+	- **gloss** (glose) identifie une expression ou un mot utilisé pour fournir une glose ou une définition à quelque autre mot ou expression.
+	- **desc** (description) contient une courte description de l’objet documenté par son élément parent, qui comprend son utilisation prévue, son but, ou son application là où c’est approprié.
+```XML
+<elementSpec ident="lem" mode="change">
+ <gloss>Lemme</gloss>
+ <desc>Permet de signaler la leçon choisie dans le texte édité.</desc>
  [...]
- `</elementSpec>`
-
+ </elementSpec>
+```
 ---
 ### 2- Syntaxe des éléments XML à signaler dans sa documentation
 
-**att** (attribut) contient le nom d’un attribut apparaissant dans le courant du texte.
-**gi** (identifiant générique) contient le nom d’un élément.
-**tag** (balise) le contenu d’une balise ouvrante ou fermante, avec éventuellement des spécifications d’attributs, mais à l’exclusion des caractères marquant l’ouverture et la fermeture de la balise.
-**val** (valeur) contient une seule valeur d’attribut.
+- **att** (attribut) contient le nom d’un attribut apparaissant dans le courant du texte.
+- **gi** (identifiant générique) contient le nom d’un élément.
+- **tag** (balise) le contenu d’une balise ouvrante ou fermante, avec éventuellement des spécifications d’attributs, mais à l’exclusion des caractères marquant l’ouverture et la fermeture de la balise.
+- **val** (valeur) contient une seule valeur d’attribut.
 
 ---
 Exemple :
