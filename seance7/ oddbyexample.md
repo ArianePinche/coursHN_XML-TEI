@@ -1,18 +1,5 @@
 # Tutoriel Oddbyexample
 
-- Mise à jour des add-on dans Oxygen :
-	- Options/Préférences/Association de type de document
-		- Tout désactiver
-		- Bien vérifier que la ligne "options globales" est cochée
-- Add-ons
-		- aide/installer les nouveaux add-ons 
-		- Ajouter http://www.tei-c.org/release/oxygen/updateSite.oxygen
-		- Appliquer et accepter
-	- Aide/Gérer les Add-ons/Installer
-		- Tout activer et tout appliquer
-	- Options/Préférences/Association de type de document
-		- Tout activer, appliquer, accepter
----
 
 - Mise en place du scénario
 	- Configurer un scénario de transformation (CTRL+MAJ+C ou menu Document/Transformation/Configurer...)

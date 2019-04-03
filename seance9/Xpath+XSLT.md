@@ -5,7 +5,6 @@
 
 [Mon rêve familier](img/Mon_reve_familier.png)
 [Le Misanthrope](img/Misanthrope.png)
-[Le Cid](img/LeCid.png)
 
 ---
 ## Initiation à Xpath
@@ -44,9 +43,6 @@ Michael R. Kay, XPath 2.0 programmer’s reference, Indianapolis, IN, Wrox Press
 * Le Misanthrope
 	* Donner le chemin de la racine TEI vers les vers d’une scène;
 	* Donner le chemin de la racine TEI vers la déclaration d’un personnage;
-* Le Cid
-	* Donner le chemin de la racine TEI vers la déclaration d’un nom de personnage dans la liste des personnages de la préface;
-	* Donner le chemin de la racine TEI vers les vers de la pièce.
 
 ---
 
@@ -81,8 +77,6 @@ Xpath possède plusieurs axes de relation :
 * Le Misanthrope
 	* Donner le chemin le plus court depuis un vers vers le nom du personnage qui parle;
 	* Donner le chemin le plus court depuis les vers d’une scène vers le titre de la scène;
-* Le Cid
-	* Donner le chemin le court de la racine TEI vers un des paragraphes de la préface.
 
 ---
 
@@ -104,9 +98,6 @@ Exemples :
 	* Donner le chemin le plus rapide de la racine TEI vers le vers n°2 du premier quatrain;
 * Le Misanthrope
 	* Donner le chemin le plus rapide de la racine TEI vers le nom du locuteur de la troisième réplique de l'acte I, scène 1;
-* Le Cid
-	* Donner le chemin le rapide de la racine TEI vers le nom du deuxième personnage de la liste des personnages déclarée dans la préface.
-	* Récupérer la chaîne de caractères contenue dans la balise `<role>`.
 
 ---
 #### Quelques abréviations
@@ -126,8 +117,6 @@ Exemples :
 	* Donner le chemin le plus rapide de la racine TEI vers le vers n°2 du premier quatrain;
 * Le Misanthrope
 	* Donner le chemin le plus rapide de la racine TEI vers le nom du locuteur de la troisième réplique de l'acte I, scène 1;
-* Le Cid
-	* Donner le chemin le rapide de la racine TEI le nom du deuxième personnage de liste des personnages déclarée dans la préface.
 
 ---
 #### Traduire les expressions suivantes :  
@@ -138,27 +127,6 @@ Exemples :
 * `//book/title`
 * `chapter//footnote`
 * `.//footnote`
-
-----
-
-#### ATTENTION : 
-`<chapter//diagram[1]>`!= `<chapter/descendant::diagram)[1]>`, pourquoi ?
-```XML
-		<chapter>
-                <section>
-                    <diagram nr='12'/>
-                    <diagram nr='13'/>
-                </section>
-                <section>
-                    <diagram nr='14'/>
-                    <diagram nr='15'/>
-                </section>
-                <section>
-                    <diagram nr='16'/>
-                </section>
-		</chapter>
-```
-Pour aller plus loin : https://www.w3schools.com/xml/xpath_intro.asp 
 
 ---
 
@@ -179,14 +147,9 @@ Elliotte Rusty Harold, W. Scott Means, Philippe Ensarguet [et al.], *XML en conc
 
 ---
 
-
 ![300% center](img/Trans-XSLT.png)
 
-
-
-
 ---
-
 
 ![image motif](img/motif.png)
 
@@ -227,6 +190,3 @@ Dans Oxygen :
 5) Copier les `<lg>` qui sont premiers dans l’arbre;
 6) Copier les `<lg>` qui sont moins que deuxième dans l’arbre;
 7) Copier les `<lg>` qui sont plus que deuxième dans l’arbre.
-
----
-**Pour les plus aguerris** : sélectionner uniquement le troisième vers du poème sans passer par `<lg>[1]`.

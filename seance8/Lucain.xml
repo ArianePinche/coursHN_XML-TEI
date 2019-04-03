@@ -2,6 +2,7 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -16,11 +17,11 @@
          </publicationStmt>
          <sourceDesc>
             <listWit>
-               <witness xml:id="V">Université de Leyde, Vossianus lat. XIX Q.51<date when="0900">10e
+               <witness xml:id="V">Université de Leyde, Vossianus lat. XIX Q.51 <date when="0900">10e
                      siècle</date></witness>
-               <witness xml:id="Va">Université de Leyde, Vossianus lat. XIX Q.51<date when="0900"
+               <witness xml:id="Va">Université de Leyde, Vossianus lat. XIX Q.51 <date when="0900"
                      >10e siècle</date>, annotations ou commentaires</witness>
-               <witness xml:id="M">Université de Montpellier, ms H113<date notBefore="0800"
+               <witness xml:id="M">Université de Montpellier, ms H113 <date notBefore="0800"
                      notAfter="0900">9e-10e siècle</date></witness>
                <witness xml:id="M1">Université de Montpellier, ms H113<date notBefore="0800"
                      notAfter="0900">9e-10e siècle</date>, prima lectio</witness>
@@ -174,18 +175,18 @@
                   <lem>colligit</lem>
                   <rdg wit="#M1">collegit</rdg>
                </app> iram</l>
-            <l n="a208">mox ubi se saeuae stimulauit uerbcre caudae</l>
+            <l n="208">mox ubi se saeuae stimulauit uerbere caudae</l>
             <l n="209">erexitque <app>
                   <lem>iubam</lem>
                   <rdg wit="#V #M1 #P1 #U">iubas</rdg>
                </app> et <app>
                   <lem>uasto</lem>
-                  <rdg wit="#p" type="rasura">uasto</rdg>
+                  <rdg wit="#p" type="rasura"><del>uasto</del></rdg>
                </app>
                <app>
                   <lem wit="#Z">graue</lem>
-                  <rdg wit="#Z1 #P #G #m">grauae</rdg>
-                  <rdg type="om" wit="#C #A #B #E #F #L #M #N #Q #S #U #V"/>
+                  <rdg wit="#Z1 #P #G #m">gravae</rdg>
+                  <rdg type="om." wit="#C #A #B #E #F #L #M #N #Q #S #U #V"/>
                </app> murmur hiatu</l>
             <l n="210">infremuit, <app>
                   <lem>tunc</lem>
@@ -227,7 +228,7 @@
                   <rdg wit="#P">primis</rdg>
                </app> in obliquum sonipes opponitur amnem</l>
             <l n="221">excepturus aquas ; molli turn cetera rumpit</l>
-            <l n="222">turba uado faciles iarn fracti fluminis undas.</l>
+            <l n="222">turba uado faciles iam fracti fluminis undas.</l>
          </lg>
       </body>
    </text>
