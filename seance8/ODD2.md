@@ -41,7 +41,7 @@ Modification d'un élément avec @mode="change"
 ---
 ### Définir les modalités d’apparition d’un élément
 
-La règle définissant une séquence apparaît directement en dessus de la balise ouvrante de l’**elementSpec** dans un élément **content**.
+La règle définissant une séquence apparaît directement en dessous de la balise ouvrante de l’**elementSpec** dans un élément **content**.
 
 La séquence est contenue dans un élément **sequence** avec un attribut **preserveOrder** qui permet de spécifier si l’ordre de déclaration des éléments de la séquence est signifiant.
 
