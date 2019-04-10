@@ -180,6 +180,13 @@ Dans Oxygen :
 3) Appliquer la règle suivante :
 `<xsl:template match="text()"/>`
 
+4) Appliquer la règle suivante :
+```XML
+<xsl:template match="/">
+  <xsl:copy-of select="."/>
+<xsl:template/>
+```
+
 ---
 ## Sélectionnner des éléments XML
 
@@ -188,5 +195,4 @@ Dans Oxygen :
 3) Sélectionner et copier tous les troisièmes vers;
 4) Sélectionner et copier le troisième `<l>` du deuxième tercet;
 5) Copier les `<lg>` qui sont premiers dans l’arbre;
-6) Copier les `<lg>` qui sont moins que deuxième dans l’arbre;
-7) Copier les `<lg>` qui sont plus que deuxième dans l’arbre.
+
