@@ -6,14 +6,14 @@
 |Séance 2 |Présentation de TEI|
 |Séance 3 | Structuration générale d’un fichier TEI|
 |Séance 4|Les TEIguidelines|
-|Séance 5|Initiation à l’édition scientifique et description des sources manuscrites|
-|Séance 6|Encoder une édition scientifique|
+|Séance 5|Initiation à l’édition scientifique et la description des sources manuscrites|
+|Séance 6|Encoder une édition critique|
 |Séance 7|Les schémas XML (1) : Les différents formats|
 |Séance 8|Les schémas XML (2) : Personnalisations avancées de ODD|
-|Séance 8|Les schémas XML (3) : Mise en pratique |
-|Séance 10|Initiation à Xpath |
-|Séance 11|Transformer et interroger son XML|
-|Séance 12|Retour d’expérience|
+|Séance 09|Initiation à Xpath  et XSL
+|Séance 10|Transformer et interroger son XML (1)|
+|Séance 11|Transformer et interroger son XML (2)|
+|Séance 12|Retour d’expérience et avancée du projet|
 
 ## Modalité d’évaluation
 Évaluation finale : 
