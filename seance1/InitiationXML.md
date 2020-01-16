@@ -1,7 +1,7 @@
 # Qu’est-ce qu’un texte ?
 
 ## Matérialité du texte
-- 	Le texte brut (.txt) / *plain text* se compose de caractères pour lesquels il existe plusieurs répertoires :
+- 	Le texte brut (.txt) / *plain text* se compose de caractères pour lesquels ils existent plusieurs répertoires :
 		- ASCII American Standard Code for Information Interchange)
 		- ISO 8859-1 (Latin 1)
 		- UTF-8 (Universal Character Set Transformation Format - 8 bits)
@@ -11,7 +11,8 @@
 - Le texte « stylé » / *fancy text*: balises et mise en valeur typographique :
 	- balisage LaTeX
 	- balisage HTML
-----
+	
+---
 
 
 ## La notion « texte »
@@ -20,6 +21,7 @@
 
 - Comment décrire les différents aspects d’un texte ?
 	- Le balisage sémantique permet d’expliciter certains aspects du texte. **XML** (eXtended Markup langage) est très adapté pour ce type d’usage. 
+
 ---
 
 ***Exemple de balisage typographique et sémantique***
@@ -32,7 +34,7 @@
 
 *Pour réviser* : <https://github.com/architexte/cours-TEI/blob/master/1-text-balises.md>
 
-----
+---
 
 - **Quel est l’intérêt d’un balisage sémantique ?**
 
@@ -41,20 +43,19 @@
 <https://www.youtube.com/watch?v=0DB51fblNWI>
 
 ---
-## Encoder en XML
+# Introduction à XML
 
 Observer un document XML : *L’année 1437 dans la pratique de Pierre Christofle, notaire du Châtelet d’Orléans*, <http://elec.enc.sorbonne.fr/christofle/index.html>
 
 -----
 
-
-### Définition
+## Définition
 
 XML est un format de données pur, très simple et documenté, conçu pour la *description* des documents textuels. XML ne possède pas de jeu de balises prédéfini.
 
 ---
 
-### Un standard international
+## Un standard international
 
 Depuis 1998, XML est un langage libre et documenté. XML est également un **langage standard** respectant les recommandations du **W3C** (World Wide Web Consortium), il facilite :
 
@@ -64,7 +65,7 @@ Depuis 1998, XML est un langage libre et documenté. XML est également un **lan
 
 ----
 
-### Structure générale du XML
+## Structure générale du XML
 
 Les données sont incluses dans le document XML sous forme de chaînes de caractères délimitées par un balisage les décrivant. L’unité de base qui comprend données et balisage est appelée élément.
 
@@ -74,22 +75,27 @@ Les données sont incluses dans le document XML sous forme de chaînes de caract
 
 Les éléments XML suivent un principe d’arborescence par imbrication.
 
-*Exemple* : `<elementParent><elementEnfant>chaineCaracteres</elementEnfant></elementParent>`
+*Exemple* :
+```XML
+<elementParent>
+  <elementEnfant>chaineCaracteres</elementEnfant>
+</elementParent>
+```
 
 Ainsi les éléments *enfants* héritent des propriétés des éléments *parents*
 
-----
+---
 
-### Un peu d'Histoire...
+## Un peu d'Histoire...
 
 - SGML (1970), Standard Generalized Markup Language;
 	- HTML, HyperText Markup Language: affiche des données notamment sur le Web;
 	- XML, eXtensible Markup Language: contient et structure des données textuelles.
 ---
 
-## Les éléments XML
+# Les éléments XML
 
-### Éléments et attributs
+## Éléments et attributs
 
 #### Les éléments
 `<element>texte</element>` ou `<elementVide/>`
@@ -97,9 +103,13 @@ Ainsi les éléments *enfants* héritent des propriétés des éléments *parent
 Les éléments doivent tous strictement respecter le principe d'imbrication. 
 
 #### Les attributs
-`<MiseEnValeur rendu=" rouge italique" position=" centrePage">texte</MiseEnValeur>`
+```XML
+<MiseEnValeur rendu="rouge italique" position="centrePage">
+  texte
+</MiseEnValeur>
+```
 
-----
+---
 
 **Quelques règles importantes :**
 
@@ -125,17 +135,21 @@ Astuce : convertisseur de caractères (pour obtenir le code hexadécimal), <http
 
 ----
 
-### Instruction de traitement et déclaration XML
+## Instruction de traitement et déclaration XML
 
 `<?xml version="1.0" encoding="UTF-8"?>`
 
 Les instructions de traitement sont un autre moyen de fournir des informations aux applications auxquelles est destiné le document. 
-Une instruction de traitement commence par « < ? » et se termine par « ?> ».
+Une instruction de traitement commence par "< ?" et se termine par "?>".
 
 Ces dernières sont des balises et pas des éléments. Elles doivent donc être en dehors d'une balise.
 
 Les instructions de traitement les plus courantes sont l'appel d'une feuille de style, d'un schéma et l'appel d'une version de XML. Ces appels doivent être placés avant l'élément racine. 
 
+---
+Pour réviser :
 
-Pour réviser : https://www.youtube.com/watch?v=R0ncI_rr1z4&list=PL77mHK9JuenN9NXeXQbVcUORz7HZk-9Pv&index=2 
+**Why do we encode : E. Pierazzo**
+
+https://www.youtube.com/watch?v=R0ncI_rr1z4&list=PL77mHK9JuenN9NXeXQbVcUORz7HZk-9Pv&index=2 
 
