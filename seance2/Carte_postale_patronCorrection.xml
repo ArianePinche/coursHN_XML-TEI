@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text type="cartePostale">
+      <body>
+         <div type="recto" facs="1"/>
+         <div type="verso" facs="2">
+            <spanGrp type="en-tête">
+               <span type="legende" rend="haut gauche">78 - Les sables d'Olonne (vendée)<lb/>le
+                  port</span>
+               <span type="timbre" rend="haut centre" facs="3">Premier timbre représentant à droite
+                  une tour et à gauche un visage de femme surmontée d'une haute coiffe</span>
+               <span type="tamponPoste" rend="haut droite" facs="4">Timbre bleu et rouge de la
+                  république française, tampon de la poste année 85 eles sables d'Olonne Vendée 1967
+                  par-dessus</span>
+            </spanGrp>
+            <div type="message">
+               <p>Bientôt sur le chemin de retour <lb/> avons eu du beau temps tout<lb/> le mois de
+                  juillet. Vous souhaite<lb/> à tous la même chose.<lb/>
+               </p>
+               <p>J'espère que vous êtes tous en bonne<lb/> santé. A chacun son tour, le<lb/> bon
+                  temps et le repos.<lb/>
+               </p>
+               <closer>
+                  <salute>avec d'affectueuses pensées et<lb/> bons baisers à tous</salute>
+                  <signed>Marcelle</signed>
+               </closer>
+            </div>
+            <span type="destinataire">
+               <address>
+                  <persName type="destinataire">Mme Veyssade Lucienne</persName>
+                  <street>31, rue du Président Kennedy</street>
+                  <settlement>ALfortville <corr rend="rature" cert="low">val ???</corr>) val de
+                     Marne</settlement>
+               </address>
+            </span>
+         </div>
+      </body>
+   </text>
+</TEI>
