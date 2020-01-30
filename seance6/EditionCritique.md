@@ -24,9 +24,7 @@ ROBINSON, Peter, « Where We Are with Electronic Scholarly Editions, and Where 
 
 Une édition moderne afin de transmettre un texte compare les manuscrits pour établir le texte original, et rendre compte de cette comparaison dans un apparat critique.
 
-À partir de la comparaison des variantes : on essaie d’établir une généalogie des textes, pour pouvoir déterminer quel témoignage (leçon) est celui qui a le plus de chance d’être équivalent au texte original (archétype).
-
-Pour aller plus loin :  https://collatex.net/doc/
+À partir de la comparaison des variantes, on essaie d’établir une généalogie des textes pour pouvoir déterminer quel témoignage (leçon) est celui qui a le plus de chance d’être équivalent au texte original (archétype).
 
 ---
 
@@ -58,13 +56,9 @@ Pour aller plus loin : BOURGAIN, Pascale et VIELLIARD, Françoise, *Conseils pou
 
 * Définir quelle présentation on souhaite :
 
-	* **Apparat positif**, qui enregistre et fait figurer explicitement les leçons de chaque témoin accompagnée de son sigle ; le plus lourd, mais le plus clair ;
-	* **Apparat négatif**, qui ne fait figurer que les témoins dont le texte diffère. Tous les autres, qui ne sont pas signalés, sont supposés porter le texte retenu ;
+	* **Apparat positif**, qui enregistre et fait figurer explicitement les leçons de chaque témoin accompagnée de son sigle ;
+	* **Apparat négatif**, qui ne fait figurer que les témoins dont le texte diffère. Tous ceux qui ne sont pas signalés sont supposés porter le texte retenu ;
 	* **Apparat mixte**, négatif par défaut qui ne devient positif qu’en cas de besoin de clarification.
-
----
-
-![apparat](./img/ExempleApparat.pdf)
 
 ---
 
