@@ -197,7 +197,7 @@ EAD est une DTD (un schéma d’utilisation) de XML.
 ---
 ### Pour résumer
 
-Extrait de Florent Palluault, « Informatiser des descriptions complexes : l’utilisation de l’EAD et de la TEI pour les manuscrits et les livres anciens en France », *IFLA 2012 (Helsinki)*, [en ligne : http://conference.ifla.org/past/2012/212-palluault-fr.pdf.
+Extrait de Florent Palluault, « Informatiser des descriptions complexes : l’utilisation de l’EAD et de la TEI pour les manuscrits et les livres anciens en France », *IFLA 2012 (Helsinki)*, en ligne : https://www.ifla.org/past-wlic/2012/212-palluault-fr.pdf
 
 "La nécessité d’une arborescence est moindre pour ces documents que pour des ensembles d’archives, et la sémantique EAD n’est pas aussi développée que celle de la TEI-P5, utilisée pour les manuscrits médiévaux dans plusieurs pays d’Europe."
 
