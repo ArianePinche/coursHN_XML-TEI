@@ -19,7 +19,7 @@ Il existe différentes formes d'édition (liste non exhaustive) :
 
 ---
 
-## Les enjeux d'une édition "allographétique"
+## Les enjeux d'une édition "graphétique"
 
 Geste: un corpus de chansons de geste, <http://dev.chartes.psl.eu/elec/geste/>
 
@@ -29,6 +29,8 @@ Corpus test : La séquence de sainte Eulalie
 * Voir le manuscrit sur Gallica : <https://gallica.bnf.fr/ark:/12148/btv1b84526286/f288.item>
 * Obtenir le texte sur wikisource :
 <https://fr.wikisource.org/wiki/Séquence_de_sainte_Eulalie>
+
+Pour aller plus loin, voir l'article : *Paléographie statistique pour décrire, identifier, dater... Normaliser pour coopérer et aller plus loin ?* de Dominique Stutzmann, en ligne : https://halshs.archives-ouvertes.fr/halshs-00596970/document
 
 ---
 
@@ -88,6 +90,17 @@ Corpus test : La séquence de sainte Eulalie
 * Corrections : `<choice><sic></sic><corr></corr></choice>`.
 
 ---
+
+NB : Dans une édition numérique, il est conseillé d'utiliser les caractères UTF-8. Il existe des [fontes spécialisées](https://folk.uib.no/hnooh/mufi/fonts/) dans la représentation des manuscrits : 
+
+* Palemonas MUFI
+* Junicode 
+
+Pour les caractères qui n'existent pas dans toutes les fontes, passer par l'entité hexadécimale XML.
+
+Astuce : convertisseur pour les caractères <https://r12a.github.io/app-conversion>
+
+---
 #### Traitement des variations graphiques dans un fichier TEI
 
 [*Le module gaiji*](<http://www.tei-c.org/release/doc/tei-p5-doc/en/html/WD.html>)
@@ -112,20 +125,16 @@ Corpus test : La séquence de sainte Eulalie
 *Déclaration d'entités*
 
 Exemple : 
-`<!ENTITY pbarre-pre "<choice><abbr>&#58981;</abbr><expan>pre</expan></choice>" >`
 
+```XML
+<!DOCTYPE TEI [
+<!ENTITY pbarre-pre 
+"<choice><abbr>&#58981;</abbr>
+<expan>pre</expan></choice>">
+]>
+
+```
 La déclaration se fait dans une DTD interne, soit dans une DTD externe.
-
----
-
-NB : Dans une édition numérique, il est conseillé d'utiliser les caractères UTF-8. Il existe des [fontes spécialisées](https://folk.uib.no/hnooh/mufi/fonts/) dans la représentation des manuscrits : 
-
-* Palemonas MUFI
-* Junicode 
-
-Pour les caractères qui n'existent pas dans toutes les fontes, passer par l'entité hexadécimale XML.
-
-Astuce : convertisseur pour les caractères <https://r12a.github.io/app-conversion>
 
 ---
 

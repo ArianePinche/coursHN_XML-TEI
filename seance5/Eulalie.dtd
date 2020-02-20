@@ -1,7 +1,1 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!ENTITY pbarre-pre '<choice><abbr>&#58981;</abbr><expan>pre</expan></choice>' >
-<!ENTITY obarre-om '<choice><abbr>õ</abbr><expan>om</expan></choice>'>
-<!ENTITY xps-christus '<choice><abbr>x&#58981;s</abbr><expan>xr<ex>istu</ex>s</expan></choice>'>
-<!ENTITY xpi-christi '<choice><abbr>x&#58981;i</abbr><expan>xr<ex>ist</ex>i</expan></choice>'>
-<!ENTITY ntilde-non '<choice><abbr>n&#185;</abbr><expan>n<ex>on</ex></expan></choice>'>
-<!ENTITY pbarré-per '<choice><abbr>&#42833;</abbr><expan>p<ex>er</ex></expan></choice>' >
