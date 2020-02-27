@@ -1,4 +1,34 @@
 # Séance 8 : ODD (2) 
+
+---
+
+# Tutoriel Oddbyexample
+
+- Mise à jour des add-on dans Oxygen :
+	- Options/Préférences/Association de type de document
+		- Tout désactiver
+		- Bien vérifier que la ligne "options globales" est cochée
+- Add-ons
+		- aide/installer les nouveaux add-ons 
+		- Ajouter https://www.tei-c.org/release/oxygen/updateSite.oxygen
+		- Appliquer et accepter
+	- Aide/Gérer les Add-ons/Installer
+		- Tout activer et tout appliquer
+	- Options/Préférences/Association de type de document
+		- Tout activer, appliquer, accepter
+---
+
+- Mise en place du scénario
+	- Configurer un scénario de transformation (CTRL+MAJ+C ou menu Document/Transformation/Configurer...)
+	- Créer un nouveau scénario : XML transformation with XSLT;
+	- Renseigner le chemin de l'XSL
+		- `${frameworks}/tei/xml/tei/stylesheet/tools/oddbyexample.xsl`;
+	- Sélectionner processeur Saxon 9.xX
+		- Options avancées, template (-it) : main;
+		- Paramètres : corpus ${cfdu} (i.e. répertoire courant)
+	- Configurer la sortie (onglet Sortie) : définir un nom et un emplacement pour la future ODD.
+	- Appliquer l'ODD sur le fichier Mon_reve_familierTEI.xml
+
 ---
 ## Personnalisation du schéma
 
@@ -25,14 +55,16 @@ Modification d'un élément avec @mode="change"
 
 ```XML
 <elementSpec ident="lg" mode="change">
-     <attList>
-         <attDef ident="part" mode="delete"/>
-         <attDef ident="type" mode="change">
-            <valList mode="add" type="closed">
-                <valItem ident="cantilene"/>
-             </valList>
-           </attDef>
-       </attList>
+  <attList>
+  <attDef ident="type" mode="change">
+   <valList mode="add" type="closed">
+  <valItem ident="quatrain"/>
+  <valItem ident="sizain"/>     
+  <valItem ident="sonnet"/>   
+  <valItem ident="tercet"/>
+  </valList>
+  </attDef>
+ </attList>
 </elementSpec>
 ```
 
@@ -101,5 +133,3 @@ Reprendre le fichier XML de Lucain,
 - rendre obligatoire la présence d’un seul `<lem>` ;
 - rendre obligatoire la présence d’une ou plusieurs leçons ;
 - Générer votre schéma RelaxNG et l’associer à votre fichier XML.
-
-**3-Générer vos guidelines en HTML**

@@ -1,4 +1,4 @@
-## Séance 10
+## Séance 11
 
 # Les règles de base de XSL
 ---

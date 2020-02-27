@@ -1,4 +1,4 @@
-# Séance 9 : Initiation à Xpath et XSLT
+# Séance 10 : Initiation à Xpath et XSLT
 
 ---
 ## Construire des arbres TEI
@@ -130,7 +130,10 @@ Exemples :
 
 ---
 
-## Initiation à XSL
+# Initiation à XSL
+
+---
+
 ## L'environnement XML 
 
 
@@ -178,7 +181,9 @@ Dans Oxygen :
 ```
 
 3) Appliquer la règle suivante :
-`<xsl:template match="text()"/>`
+```XML 
+<xsl:template match="text()"/>
+```
 
 4) Appliquer la règle suivante :
 ```XML
