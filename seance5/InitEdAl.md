@@ -158,7 +158,7 @@ Ex : Lexture interactive de la *Séquence de sainte Eulalie*
 TEIguidelines [11.1 Digital Facsimiles](http://www.tei-c.org/release/doc/tei-p5-doc/fr/html/PH.html#PHFAX)
 
 * Déclarer un élément `<facsimile>` dans l'élément racine TEI;
-* Déclarer en élément `<graphic>`, enfant de `<facsimile>`
+* Déclarer en élément `<surface>`, enfant de `<facsimile>`, puis un élément `<graphic>` enfant de `<surface>`.
 	* `<graphic url='adresse_image' width='largeur' height='longueur' />`
 
 ---
