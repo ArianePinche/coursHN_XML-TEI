@@ -82,7 +82,8 @@ Pour aller plus loin : Chap 12.2 [*Linking the Apparatus to the Text*](http://w
 <listWit>
  <witness xml:id="C1">Paris, BnF, ms 412</witness>
  <witness xml:id="C2">Paris, BnF, ms 411</witness>
- <witness xml:id="C3">London, British Library, royal 20 D. VI.</witness>
+ <witness xml:id="C3">London, British Library,
+   royal 20 D. VI.</witness>
 </listWit>
 ```
 
