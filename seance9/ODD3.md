@@ -44,7 +44,7 @@ Dans la première `<div1>`, on peut introduire sa documentation sous la forme d'
 - **egXML** et **@xmlns="http://www.tei-c.org/ns/Examples** permettent d’insérer des exemples en XML dans sa documentation ;
 
 ---
-#### Exemple (voir manipulation 1)
+#### Exemple (voir manipulations 1 et 2)
 
 ```XML
 <head>Le fileDesc</head>
@@ -77,7 +77,7 @@ On peut également personnaliser la description de certains éléments au niveau
 
 ---
 
-## Exemple (voir manipulation 2)
+## Exemple (voir manipulation 3)
     
 ```XML
 <elementSpec ident="lem" mode="change">
@@ -100,7 +100,7 @@ On peut utiliser cette possibilité pour proposer des traductions quand elles n'
 
 ---
 
-## Exemple (voir manipulation 3)
+## Exemple (voir manipulation 4)
 
 Le corpus présente trois cas de figure. Dans le premier cas, la ponctuation originale est supprimée dans l’édition normalisée. L’ajout de l’attribut `<att>`type`</att>` de valeur `<val>`orig`</val>` sur l’élément `<gi>`pc`</gi>` signale que le signe est issu de la ponctuation du manuscrit et qu’il ne doit pas apparaître dans la version normalisée.
 
