@@ -218,21 +218,23 @@ Dans Oxygen
 2) Appliquer la règle suivante :
 ```XML
 <xsl:template match="/">
-        <xsl:apply-templates/>
+   <xsl:apply-templates/>
 </xsl:template> 
 ```
 ---
 
 3) Appliquer la règle suivante :
 ```XML 
-<xsl:template match="text()"/>
+<xsl:template match="/">
+   <xsl:value-of select="//text()"/>
+</xsl:template> 
 ```
 
 4) Appliquer la règle suivante :
 ```XML
 <xsl:template match="/">
   <xsl:copy-of select="."/>
-<xsl:template/>
+</xsl:template>
 ```
 
 ---
