@@ -23,13 +23,30 @@ On peut ajouter dans la règle du texte,
 </xsl:template>
   ```
 
-mais aussi des balises, ou un motif qui permet de récupérer certains éléments de l’arbre XML soit tels quels, soit transformés ou triés par des fonctions XSL ou Xpath.
+mais aussi des balises ou un motif qui permet de récupérer certains éléments de l’arbre XML soit tels quels, soit transformés ou triés par des fonctions XSL ou Xpath.
 
 ```XML
 <xsl:template match="mon_element_xml">
     <xsl:text>Ici, il y avait mon élément</xsl:text>
 </xsl:template>
 ```
+
+---
+## Manipulation 1
+
+*Nous travaillons toujours à partir du poème Mon Rêve familier*
+
+**Voir la vidéo manipulation 1** (montrer la diff. ac et sans xsl:text)
+
+- Ouvrir une nouvelle xsl dans Oxygen
+- Mettre en place le préambule en déclarant l'espace de nom TEI
+	- xmlns:tei="http://www.tei-c.org/ns/1.0"
+- Déclarer l'espace de nom tei par défaut pour le Xpath
+	- xpath-default-name-space="http://www.tei-c.org/ns/1.0"
+- Déclarer l'espace de nom tei par défaut pour tous les éléments qui seront créés dans le document de sortie 
+	- xmlns=="http://www.tei-c.org/ns/1.0" 
+- Appliquer les règles vues précédemment en remplaçant mon_element_xml par `<l>`
+- Sauvegarder l'xsl
 
 ----
 
@@ -40,14 +57,15 @@ mais aussi des balises, ou un motif qui permet de récupérer certains élément
 ###### Méthode n°1 :
 ```XML
 <xsl:template match="mon_element_xml">
-   <p>Ici, il y avait mon élément</p>
+ <p>Ici, il y avait mon élément</p>
 </xsl:template>
 ```
 
 ###### Méthode n°2 :
 ```XML
 <xsl:template match="mon_element_xml">
-<xsl:element name="p">Ici, il y avait mon élément</xsl:element>
+<xsl:element name="p">Ici, il y avait 
+  mon élément</xsl:element>
 </xsl:template>
 ```
 
@@ -57,16 +75,19 @@ mais aussi des balises, ou un motif qui permet de récupérer certains élément
 ###### Méthode n°1 :
 ```XML
 <xsl:template match="mon_element_xml">
-  <p type="valeur_attribut">Ici, il y avait mon élément</p>
+  <p type="valeur_attribut">Ici, il y avait
+    mon élément</p>
 </xsl:template>
 ```
 ou
 
 ```XML
 <xsl:template match="mon_element_xml">
-        <p type="{./chemin_Xpath}">Ici, il y avait mon élément</p>
+        <p type="{./chemin_Xpath}">Ici, 
+          il y avait mon élément</p>
 </xsl:template>
 ````
+---
 
 ###### Méthode n°2 :
 ```XML
@@ -80,9 +101,21 @@ ou
 </xsl:template>
 ```
 ---
+## Manipulation 2
+
+**Voir la video manipulation 2**
+
+- Reprendre votre xsl
+- Appliquer les règles vues précédemment en remplaçant mon_element_xml par `<lg>`
+
+---
+
 ## Apply-templates
 
-Cette règle indique que les règles définies dans l’XSL doivent être appliquées aux éléments enfants de l’élément sélectionné par la règle. 
+L’une des règles motifs de base de xsl est apply-templates : `<xsl:apply-templates/>`
+**Il est extrêmement important de bien comprendre son fonctionnement**
+
+Cette règle indique au processeur que vous voulez que les règles que vous définirez dans l’XSL pourront être appliquées pour les éléments enfants de l’élément appelé par `<xsl:template>`.
 
 ###### Exemple
 
@@ -93,6 +126,14 @@ Cette règle indique que les règles définies dans l’XSL doivent être appliq
      </xsl:element>
 </xsl:template>
 ```
+---
+## Manipulation 3
+
+**Voir la video manipulation 3**
+
+- Reprendre votre xsl
+- Ajouter un apply-templates dans la règle définie pour `<lg>`
+ 
 ---
 
 ## Copy et copy-of
@@ -119,12 +160,21 @@ Elliotte Rusty Harold, W. Scott Means, Philippe Ensarguet[et al.], *XML en conce
 	<xsl:copy-of select="chemin_Xpath"/>
 </xsl:template>
 ```
+---
+## Manipulation 4
+
+**Voir la vidéo manipulation 4**
+
+- Reprendre votre xsl
+- Appliquer une règle avec un copy-of sur `<teiHeader>`
+- Appliquer une règle avec copy sur `<TEI>`
+- Appliquer à l'intérieur de cette dernière règle un *apply-templates*
 
 ---
 
 ## Value-of
 
-"« L’élément xsl:value-of calcule la valeur textuelle d’une expression Xpath et l’insère dans l’arbre résultat. »
+« L’élément xsl:value-of calcule la valeur textuelle d’une expression Xpath et l’insère dans l’arbre résultat. »
 
 Elliotte Rusty Harold, W. Scott Means, Philippe Ensarguet[et al.], *XML en concentré*, Paris, O’Reilly, 2005, p. 543.
 
@@ -135,6 +185,23 @@ Elliotte Rusty Harold, W. Scott Means, Philippe Ensarguet[et al.], *XML en conce
 ```
 ---
 
+## Manipulation 5
+
+**Voir la video manipulation 5**
+
+- Reprendre votre xsl
+- Appliquer un value-of dans la règle sur les `<l>`
+
+NB : Vous trouverez la xsl des manipulations dans le dossier de la séance sous le titre *xsl_manip.xsl*
+
+---
+
+
 ## Exercice
 
-À l’aide des éléments vus pendant la séance, proposer une mise en page du fichier XML TEI du poème de Paul Verlaine dans LaTeX.
+*Une correction sera déposée la semaine prochaine dans le dossier de la séance*
+
+À l’aide des éléments vus pendant la séance, proposer une mise en page du fichier XML TEI du poème de Paul Verlaine en HTML.
+Pour vous aider, vous avez :
+- le fichier xsl de départ pour mettre en place le HTML déposé dans le dossier de la séance
+- le code final attendu à ouvrir dans un éditeur de code (Oxygen ou Sublime par exemple)
