@@ -20,7 +20,7 @@
 
 Proposer un encodage XML-TEI pertinent et argumenté pour un corpus donné. Le fichier XML devra être régi par un schéma OOD et accompagné d'une documentation.
 
- - Rendu le 18 mai 2020
+ - Rendu le 20 mai 2021
 
 ## Bibliographie
 
