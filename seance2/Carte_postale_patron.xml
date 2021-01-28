@@ -21,7 +21,7 @@
          <div type="recto" facs="1"/>
          <div type="verso" facs="2">
             <spanGrp type="en-tête">
-               <span type="legende" rend="x"/>
+               <span type="legende" rend="x">legende</span>
                <span type="timbre" rend="x"/>
                <span type="tamponPoste" rend="x"/>
             </spanGrp>
@@ -34,7 +34,7 @@
             </div>
             <span type="destinataire">
                <address>
-                  <persName type="destinataire"/>
+                  <persName type="destinataire"></persName>
                   <street></street>
                   <settlement></settlement>
                </address>
