@@ -1,38 +1,6 @@
 # Séance 8 : ODD (2) 
 
 ---
-
-# Tutoriel Oddbyexample (voir les vidéos de manipulation)
-
-- Mise à jour des add-on dans Oxygen :
-	- Options/Préférences/Association de type de document
-		- Tout désactiver
-		- Bien vérifier que la ligne "options globales" est cochée
-- Add-ons
-		- aide/installer les nouveaux add-ons 
-		- Ajouter https://www.tei-c.org/release/oxygen/updateSite.oxygen
-		- Appliquer et accepter
-	- Aide/Gérer les Add-ons/Installer
-		- Tout activer et tout appliquer
-	- Options/Préférences/Association de type de document
-		- Tout activer, appliquer, accepter
----
-
-- Mise en place du scénario
-	- Configurer un scénario de transformation (CTRL+MAJ+C ou menu Document/Transformation/Configurer...)
-	- Créer un nouveau scénario : XML transformation with XSLT;
-	- Renseigner le chemin de l'XSL
-	- `${frameworks}/tei/xml/tei/stylesheet/tools/oddbyexample.xsl` (si cette solution ne fonctionnait pas, donner le chemin jusqu'au fichier .xsl fourni dans le dossier de la séance 8)
-
----
-
-- Sélectionner processeur Saxon-PE ou HE 9
-		- Options avancées, template (-it) : main;
-		- Paramètres : corpus ${cfdu} (i.e. répertoire courant, soit au dossier qui contient le ou les fichiers xml qui serviront de base à l'ODD)
-- Configurer la sortie (onglet Sortie) : définir un nom et un emplacement pour la future ODD.
-- Appliquer l'ODD sur le fichier Mon_reve_familierTEI.xml
-
----
 ## Personnalisation du schéma
 
 Pour personnaliser son schéma, il existe 4 manipulations principales :
@@ -73,8 +41,6 @@ N. B. Dans la plupart des cas, la suppression d’un élément est une modificat
 ### Manipulation 1
 
 - Supprimer l'élément head dans l'ODD de Mon_reve_familierTEI.xml
-
-N. B. À la fin de la manipulation, annulez cette suppression.
 
 ---
 
